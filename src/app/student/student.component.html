@@ -1,0 +1,26 @@
+<div class="container">
+  <input type="text" placeholder="search" [(ngModel)]="search">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of studentList | filter:search">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.status}}</td>
+          </tr>
+        </tbody>
+      </table>
+<!-- <ul>
+  <li *ngFor="let student of studentList">
+    {{student.name}}
+  </li>
+</ul> -->
+</div>
